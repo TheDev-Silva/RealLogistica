@@ -4,6 +4,3 @@ module.exports = {
     autoprefixer: {},
   },
 };
-module.exports = {
-  plugins: ['prettier-plugin-tailwindcss']
-}
