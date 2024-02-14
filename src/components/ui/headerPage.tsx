@@ -23,15 +23,15 @@ export default function HeaderPage() {
               <Link href={`/bolos`}>
                 <Button className="w-full uppercase h-[50px] flex justify-around items-center hover:bg-[#ff6600] hover:text-slate-950">
                   <p style={{ fontFamily: "Bebas Neue" }} className="absolute left-[120px] text-[26px]">Bolos</p>
-                  <p style={{ fontFamily: "Blooming Elegant Monoline", letterSpacing: '2px' }} className="relative text-4xl left-[12%] bottom-[5px] capitalize">confeitados</p>
+                  <p style={{ fontFamily: "Arizona", letterSpacing: '2px' }} className="relative text-2xl left-[11%] -bottom-[10px] capitalize">confeitados</p>
                 </Button>
               </Link>
             </SheetClose>
             <SheetClose asChild>
               <Link href={`/cupcake`} >
                 <Button className="w-full uppercase h-[50px] flex justify-center items-center hover:bg-[#ff6600] hover:text-slate-950">
-                  <p style={{ fontFamily: "Bebas Neue" }} className="absolute left-[120px] text-[26px]">cupcakes</p>
-                  <p style={{ fontFamily: "Blooming Elegant Monoline", letterSpacing: '2px' }} className="relative text-4xl left-[12%] bottom-[5px] capitalize">deliciosas</p>
+                  <p style={{ fontFamily: "Bebas Neue" }} className="absolute left-[120px] text-[26px]">cakes</p>
+                  <p style={{ fontFamily: "Arizona", letterSpacing: '2px' }} className="relative text-2xl left-[11%] -bottom-[10px] capitalize">deliciosas</p>
                 </Button>
               </Link>
             </SheetClose>
@@ -39,7 +39,7 @@ export default function HeaderPage() {
               <Link href={`/trufa`} >
                 <Button className="w-full uppercase h-[50px] flex justify-center items-center hover:bg-[#ff6600] hover:text-slate-950">
                   <p style={{ fontFamily: "Bebas Neue" }} className="absolute left-[120px] text-[26px]">trufas</p>
-                  <p style={{ fontFamily: "Blooming Elegant Monoline", letterSpacing: '2px' }} className="relative text-4xl left-[12%] bottom-[5px] capitalize">recheadas</p>
+                  <p style={{ fontFamily: "Arizona", letterSpacing: '2px' }} className="relative text-2xl left-[11%] -bottom-[10px] capitalize">recheadas</p>
                 </Button>
               </Link>
             </SheetClose>
