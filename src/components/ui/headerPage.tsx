@@ -53,7 +53,7 @@ export default function HeaderPage() {
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={`/trufa`} >
+              <Link href={`/cadastro`} >
                 <Button className="w-[100%] uppercase h-[50px] flex justify-center items-center hover:bg-[#ff6600] hover:text-slate-950">
                   <p style={{ fontFamily: "Bebas Neue" }} className="absolute left-[120px] text-[26px]">fazer</p>
                   <p style={{ fontFamily: "Arizona", letterSpacing: '2px' }} className="relative text-2xl left-[9%] -bottom-[10px] lowercase">cadastro</p>
