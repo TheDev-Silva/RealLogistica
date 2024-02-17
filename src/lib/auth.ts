@@ -14,7 +14,7 @@ export const authOptions: AuthOptions = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
     ],
-    callbacks: {
+    /* callbacks: {
         async session({ session, user }) {
             session.user = {
                 ...session.user, id: user.id
@@ -26,6 +26,6 @@ export const authOptions: AuthOptions = {
             return session
         }
     },
-    secret: process.env.NEXT_AUTH_SECRET
+    secret: process.env.NEXT_AUTH_SECRET */
 
 }
