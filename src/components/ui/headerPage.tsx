@@ -19,7 +19,7 @@ export default function HeaderPage() {
 
   return (
 
-    <Card className="w-full fixed py-10 px-5 backdro-filter backdrop-blur-sm bg-opacity-10 bg-orange-400 bg-clip-padding flex justify-between">
+    <Card className="w-full fixed py-10 px-5 backdro-filter backdrop-blur-sm bg-opacity-10 bg-orange-400 bg-clip-padding flex justify-between z-10">
       <Sheet>
         <SheetTrigger asChild className="">
           <Button>

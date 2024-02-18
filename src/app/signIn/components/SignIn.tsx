@@ -4,6 +4,7 @@ import { Form, FormControl, FormField } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { ArrowBigLeft } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import CreateUser from "./createUser"
 
@@ -14,13 +15,24 @@ export default function SignInPage() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
+  const router = useRouter()
   const handlerSumbmit = async (e: any) => {
     e.preventDefault()
 
     try {
       const newUser = await CreateUser({ email, password })
-      console.log('Novo usuário criado');
-      
+
+      console.log('Novo usuário criado', newUser);
+      setEmail('')
+      setPassword('')
+      if (newUser) {
+       
+        router.push('/')
+      }
+      else {
+        alert('Usuário não criado!')
+      }
+
     } catch (error) {
       setError('Erro ao criar usuário');
       console.error('Erro ao criar usuário:', error);
