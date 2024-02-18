@@ -107,8 +107,6 @@ export default function HeaderPage() {
                 </Link>
               </SheetClose>
             )}
-
-
           </div>
 
         </SheetContent>
@@ -134,6 +132,9 @@ export default function HeaderPage() {
 
         </SheetContent>
       </Sheet>
+      <div>
+        
+      </div>
 
 
     </Card>

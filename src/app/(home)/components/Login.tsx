@@ -29,11 +29,11 @@ export default function Login() {
     e.preventDefault()
 
     try {
-      const success = await LoginUser({ email, password })
+      const successUser = await LoginUser({ email, password })
 
-      console.log('Novo usuário criado', success);
+      console.log('Novo usuário criado', successUser);
 
-      if (success) {
+      if (successUser) {
 
         router.push('/trufa')
       }
@@ -68,12 +68,12 @@ export default function Login() {
                   type={"email"} value={email}
                   onChange={(e) =>
                     setEmail(e.target.value)}
-                  className="md:w-[380px] w-[350px] pl-20 shadow-lg shadow-black h-12"
+                  className="md:w-[380px] w-[350px] pl-10 shadow-lg shadow-black h-12"
                 />
               </div>
             </div>
             <div className="w-full flex items-center gap-2 justify-between">
-              <div className="md:left-24 left-20 text-slate-950 font-bold">
+              <div className="text-slate-950 font-bold">
                 Senha
               </div>
               <div className="">
@@ -93,7 +93,7 @@ export default function Login() {
             <Button className="w-full uppercase p-6 hover:bg-[#fff] hover:text-black font-bold" type="submit">
             Entrar
           </Button>
-          <Link href={``} className="min-w-[200px] hover:underline" onClick={handleClickLogin}>
+          <Link href={``} className="min-w-[200px] hover:underline text-white" onClick={handleClickLogin}>
               Fazer Login com Google
           </Link>
           </div>

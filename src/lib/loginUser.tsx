@@ -5,13 +5,16 @@ const prisma = new PrismaClient()
 
 const LoginUser = async ({ email, password }: any) => {
     try {
-        const user = await prisma.user.findUnique({
+        const userClient = await prisma.loginUser.findUnique({
             where: {
-                email,
+                email
             }
         })
-        if (!user) {
-            return false
+        if(userClient && userClient.password || password) {
+
+            return userClient;
+        } else {
+            return null
         }
     }
     catch(error){
