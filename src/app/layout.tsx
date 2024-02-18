@@ -1,4 +1,5 @@
 import HeaderPage from "@/components/ui/headerPage";
+import { cn } from "@/lib/utils";
 import Authprivider from "@/provider/authProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className, "")}>
         <Authprivider>
           <HeaderPage />
           {children}

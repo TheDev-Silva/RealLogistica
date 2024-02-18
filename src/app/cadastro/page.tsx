@@ -1,4 +1,4 @@
-import PageCadastro from "./components/pageCadastro";
+import PageCadastro from "../(home)/components/pageCadastro";
 
 
 export default function page() {
