@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { signIn, useSession } from "next-auth/react"
 import Link from "next/link"
-import PageCadastro from "./components/pageCadastro"
+import PageCadastro from "./components/pageInicial"
 
 export default function Home() {
 
