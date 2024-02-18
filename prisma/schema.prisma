@@ -80,3 +80,8 @@ model CreateUser {
   password String
   createdAt DateTime @default(now())
 }
+model LoginUser {
+  id String @id @default(cuid())
+  email String @unique
+  password String
+}
