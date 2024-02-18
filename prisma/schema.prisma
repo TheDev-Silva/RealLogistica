@@ -74,9 +74,9 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 //criação de usuário
-//não salvo ainda em migrate
 model CreateUser {
   id String @id @default(cuid())
   email String? @unique
   password String
+  createdAt DateTime @default(now())
 }
