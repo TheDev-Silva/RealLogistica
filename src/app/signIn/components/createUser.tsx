@@ -1,34 +1,35 @@
 "use server"
 import { PrismaClient } from "@prisma/client"
+import { now } from "next-auth/client/_utils";
 /* import { useRouter } from "next/navigation"; */
 
 const prisma = new PrismaClient()
 
 const CreateUser = async (userData: any) => {
 
+  try {
+    const now = new Date()
+    const adjust = new Date(now.getTime() - (30 * 60 * 60 * 1000))
 
-    /* const router = useRouter() */
-
-    try {
-
-        const data = {
-            ...userData,
-            createdAt: new Date()
-        }
-
-
-        const newUser = await prisma.createUser.create({
-            data: {
-                id: userData.id as string,
-                email: userData.email as string,
-                password: userData.password as string
-            }
-        })
-        return newUser 
-
-    } catch (error) {
-        console.log('Erro ao criar o usuário', error)
+    const data = {
+      ...userData,
+      createdAt: new Date()
+      
     }
+
+
+    const newUser = await prisma.createUser.create({
+      data: {
+        id: userData.id,
+        email: userData.email,
+        password: userData.password
+      }
+    })
+    //return newUser
+
+  } catch (error) {
+    console.log('Erro ao criar o usuário', error)
+  }
 
 };
 export default CreateUser

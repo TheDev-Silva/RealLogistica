@@ -19,19 +19,22 @@ export default function SignInPage() {
   const handlerSumbmit = async (e: any) => {
     e.preventDefault()
 
+    if(!email || !password) {
+      setError("Insira dados corretos!")
+      return;
+    }
+
+
     try {
       const newUser = await CreateUser({ email, password })
-
       console.log('Novo usuário criado', newUser);
+
       setEmail('')
       setPassword('')
-      if (newUser) {
-       
-        router.push('/')
-      }
-      else {
-        alert('Usuário não criado!')
-      }
+      
+      return router.push('/')
+      
+      
 
     } catch (error) {
       setError('Erro ao criar usuário');
@@ -39,6 +42,9 @@ export default function SignInPage() {
     }
 
   }
+  /* const handlerInicial = () => {
+    router.push('/')
+  } */
 
   return (
     <div className="p-4 gap-4 w-full min-h-auto flex flex-col items-center">
@@ -85,7 +91,7 @@ export default function SignInPage() {
             </div>
 
           </div>
-          <Button className="w-full uppercase p-6 hover:bg-[#fff] hover:text-black font-bold" type="submit">Criar Cadastrar</Button>
+          <Button className="w-full uppercase p-6 hover:bg-[#fff] hover:text-black font-bold" type="submit" >Criar Cadastrar</Button>
         </form>
 
       </div>

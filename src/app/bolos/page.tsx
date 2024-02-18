@@ -3,7 +3,7 @@ import PageBolos from "./components/pageBolos";
 
 export default function pageBolos() {
     return (
-        <div>
+        <div className="">
             <PageBolos/>
         </div>
     )

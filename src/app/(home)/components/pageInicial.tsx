@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Login from "./Login";
 
 
-export default function PageCadastro() {
+export default function PageInicial() {
 
   const router = useRouter()
 

@@ -1,4 +1,4 @@
-import PageCadastro from "../(home)/components/pageInicial";
+
 import Login from "../(home)/components/Login";
 
 
