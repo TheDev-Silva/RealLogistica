@@ -17,6 +17,12 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      Arizona: ['Arizona'],
+      Bebas_Neue: ['Bebas Neue'],
+      Blooming_Elegant_Monoline: ['Blooming Elegant Monoline'],
+      Caviar_Dreams: ['Caviar Dreams'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
