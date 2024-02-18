@@ -9,9 +9,12 @@ import { signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 
+
 export default function HeaderPage() {
 
+
   const { data, status } = useSession()
+
 
   const HandlerLogout = async () => {
     await signOut()
@@ -49,11 +52,9 @@ export default function HeaderPage() {
                   <p className="text-lg">{data.user?.name}</p>
                 </div>
 
-
               </div>
             )}
-
-
+            
           </SheetHeader>
           <div className="flex flex-col pt-4 gap-2">
 
@@ -133,7 +134,7 @@ export default function HeaderPage() {
         </SheetContent>
       </Sheet>
       <div>
-        
+
       </div>
 
 

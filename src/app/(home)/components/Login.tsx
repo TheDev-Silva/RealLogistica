@@ -29,11 +29,13 @@ export default function Login() {
     e.preventDefault()
 
     try {
-      const successUser = await LoginUser({ email, password })
+      const user = await LoginUser(email, password)
 
-      console.log('Novo usuário criado', successUser);
+      
 
-      if (successUser) {
+      if (user) {
+        //Usuário encontrado, realizar autenticação
+        
 
         router.push('/trufa')
       }
@@ -42,17 +44,16 @@ export default function Login() {
       }
 
     } catch (error) {
-      setError('Erro ao criar usuário');
-      console.error('Erro ao criar usuário:', error);
+      setError('Erro ao fazer login');
+      console.error('Erro ao fazer login:', error);
     }
-
+    signIn()
   }
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center">
       <div className="flex flex-col w-[500px] md:w-[500px] rounded-lg p-2 gap-4 justify-between ">
-
-        <form onClick={handlerSumbmit} className="w-full h-[400px] md:min-h-[300px] rounded-lg bg-[#ff6600] flex flex-col gap-4 justify-between p-4">
+        <form className="w-full h-[400px] md:min-h-[300px] rounded-lg bg-[#ff6600] flex flex-col gap-4 justify-between p-4">
           <div className="w-full flex flex-col gap-4 items-center">
             <div className="flex flex-col items-center justify-between">
               <h1 className="font-bold text-2xl uppercase text-white">Fazer Login</h1>
@@ -90,7 +91,7 @@ export default function Login() {
 
           </div>
           <div className="flex flex-col items-center">
-            <Button className="w-full uppercase p-6 hover:bg-[#fff] hover:text-black font-bold" type="submit">
+            <Button className="w-full uppercase p-6 hover:bg-[#fff] hover:text-black font-bold" onClick={handlerSumbmit}>
             Entrar
           </Button>
           <Link href={``} className="min-w-[200px] hover:underline text-white" onClick={handleClickLogin}>

@@ -1,7 +1,5 @@
 "use server"
 import { PrismaClient } from "@prisma/client"
-import { now } from "next-auth/client/_utils";
-/* import { useRouter } from "next/navigation"; */
 
 const prisma = new PrismaClient()
 
@@ -14,10 +12,7 @@ const CreateUser = async (userData: any) => {
     const data = {
       ...userData,
       createdAt: new Date()
-      
     }
-
-
     const newUser = await prisma.createUser.create({
       data: {
         id: userData.id,

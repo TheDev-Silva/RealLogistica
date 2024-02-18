@@ -1,13 +1,14 @@
-import { PrismaClient, User } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
 
 
-const LoginUser = async ({ email, password }: any) => {
+const LoginUser = async (email: string, password: string ) => {
     try {
         const userClient = await prisma.loginUser.findUnique({
             where: {
-                email
+                email,
+                password,
             }
         })
         if(userClient && userClient.password || password) {
